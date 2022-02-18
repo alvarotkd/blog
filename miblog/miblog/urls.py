@@ -13,9 +13,19 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+from re import template
+import django
 from django.contrib import admin
 from django.urls import path
 
+from categorias.views import ListadoCategorias
+
+from django.conf import settings
+from django.conf.urls.static import static
+
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    #dashboard categorias
+    path('admin/categorias', ListadoCategorias.as_view(template_name="Categorias/index.html"), name='listadodecategorias')
 ]
