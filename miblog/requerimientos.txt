@@ -2,3 +2,4 @@ Django==4.0.2
 django-bootstrap4==21.2
 django-widget-tweaks==1.4.12
 django-clear-cache==0.3
+django-feather==0.3.0

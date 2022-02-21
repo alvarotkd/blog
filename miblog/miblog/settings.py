@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'bootstrap4',
     'widget_tweaks',
     'clear_cache',
+    'django_feather',
     
 ]
 
