@@ -20,13 +20,21 @@ from django.contrib import admin
 from django.urls import path
 
 from categorias.views import ListadoCategorias
+from detalleBlog.views import DetallesBlog
 
 from django.conf import settings
 from django.conf.urls.static import static
 
 
+
+
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+
     #dashboard categorias
     path('alvaro/categorias', ListadoCategorias.as_view(template_name="categorias/index.html"), name='listadodecategorias'),
+
+    #administracion de detalles blog
+    path('alvaro/detallesBlog', DetallesBlog.as_view(template_name="detallesBlog/index.html"), name='detallesBlog'),
 ]
