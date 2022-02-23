@@ -21,9 +21,12 @@ from django.urls import path
 
 from categorias.views import ListadoCategorias
 from detalleBlog.views import DetallesBlog
+from entradas.views import listadoEntradas
 
 from django.conf import settings
 from django.conf.urls.static import static
+
+from miblog.entradas.views import listadoEntradas
 
 
 
@@ -34,7 +37,9 @@ urlpatterns = [
 
     #dashboard categorias
     path('alvaro/categorias', ListadoCategorias.as_view(template_name="categorias/index.html"), name='listadodecategorias'),
-
     #administracion de detalles blog
     path('alvaro/detallesBlog', DetallesBlog.as_view(template_name="detallesBlog/index.html"), name='detallesBlog'),
+    #administracion de entradas
+    path('alvaro/entradas', listadoEntradas.as_view(template_name="entradas/index.html"), name='listadoEntradas'),
+
 ]
